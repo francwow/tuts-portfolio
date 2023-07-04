@@ -11,16 +11,16 @@
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --quiet"
   },
   "repository": {
-    "type": "git"
-    // "url": "git+https://github.com/francwow/GreenRoots.git"
+    "type": "git",
+    "url": "git+https://github.com/francwow/tuts-portfolio.git"
   },
   "keywords": [],
   "author": "Francisco Osorio Silva",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/francwow/GreenRoots/issues"
+    "url": "https://github.com/francwow/tuts-portfolio/issues"
   },
-  "homepage": "https://github.com/francwow/GreenRoots#readme",
+  "homepage": "https://github.com/francwow/tuts-portfolio#readme",
   "dependencies": {
     "@tanstack/react-query": "^4.24.4",
     "imagemin": "^8.0.1",
