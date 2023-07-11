@@ -1,13 +1,36 @@
 import { Link, NavLink } from "react-router-dom";
+import { useContext } from "react";
+import NavContext from "../context/NavContext";
+import { NavContextType } from "../types/Types";
+import Social from "./Social";
 
-const Header = () => {
+type Header = {
+  setNavActive: (value: boolean) => void;
+};
+
+const Header = ({ setNavActive }: Header) => {
+  const navActive = useContext<NavContextType>(NavContext);
+
+  function handleBurger() {
+    setNavActive(!navActive);
+  }
+
   return (
     <div className="header-wrapper">
       <div className="header">
         <div className="logo-container">
-          <h2>
+          <h2 className="logo">
             <Link to={"/"}>tuts</Link>
           </h2>
+        </div>
+        <div className="burger-container">
+          <button
+            onClick={handleBurger}
+            className={navActive ? "nav-burger toggle" : "nav-burger"}
+          >
+            <div className="line-one"></div>
+            <div className="line-two"></div>
+          </button>
         </div>
         <div className="nav-container">
           <nav className="main-nav">
@@ -43,6 +66,7 @@ const Header = () => {
                 </NavLink>
               </li>
             </ul>
+            <Social />
           </nav>
         </div>
       </div>
