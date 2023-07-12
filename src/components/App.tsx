@@ -20,11 +20,13 @@ const App = () => {
       const img = new Image();
       img.src = image;
     });
+  }, []);
 
+  useEffect(() => {
     if (deskTop) {
       setNavActive(false);
     }
-  }, []);
+  }, [deskTop]);
 
   return (
     <BrowserRouter>
@@ -43,7 +45,7 @@ const App = () => {
               }
             />
             <Route
-              path="/about"
+              path="/acerca"
               element={
                 <About
                   deskTop={deskTop}
@@ -53,7 +55,7 @@ const App = () => {
               }
             />
             <Route
-              path="/contact"
+              path="/contacto"
               element={
                 <Contact
                   deskTop={deskTop}

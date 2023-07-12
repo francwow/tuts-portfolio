@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useState, MouseEvent, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "./Header";
 import MobileNav from "./MobileNav";
 
@@ -14,12 +14,12 @@ const Work = ({ deskTop, setLanguage, setNavActive }: Work) => {
   const [index, setIndex] = useState<number>(initialState);
   const carouselItems = ["work", "about", "contact"];
 
-  function handleHover(e: MouseEvent) {
-    if ((e.target as Element).innerHTML === "WORK") {
+  function handleHover(e: React.MouseEvent) {
+    if ((e.target as Element).innerHTML === "TRABAJO") {
       setIndex(0);
-    } else if ((e.target as Element).innerHTML === "ABOUT") {
+    } else if ((e.target as Element).innerHTML === "ACERCA") {
       setIndex(1);
-    } else if ((e.target as Element).innerHTML === "CONTACT") {
+    } else if ((e.target as Element).innerHTML === "CONTACTO") {
       setIndex(2);
     }
   }
@@ -65,43 +65,45 @@ const Work = ({ deskTop, setLanguage, setNavActive }: Work) => {
         <Header setNavActive={setNavActive} />
         <div className="content-container">
           <div className="work-links-container">
-            <div className="work-links">
-              <h2>
-                <Link
-                  className={
-                    index === 0 ? "work-link link-active" : "work-link"
-                  }
-                  onMouseEnter={handleHover}
-                  onMouseLeave={() => setIndex(4)}
-                  to={"/"}
-                >
-                  WORK
-                </Link>
-              </h2>
-              <h2>
-                <Link
-                  className={
-                    index === 1 ? "work-link link-active" : "work-link"
-                  }
-                  onMouseEnter={handleHover}
-                  onMouseLeave={() => setIndex(4)}
-                  to={"/about"}
-                >
-                  ABOUT
-                </Link>
-              </h2>
-              <h2>
-                <Link
-                  className={
-                    index === 2 ? "work-link link-active" : "work-link"
-                  }
-                  onMouseEnter={handleHover}
-                  onMouseLeave={() => setIndex(4)}
-                  to={"/contact"}
-                >
-                  CONTACT
-                </Link>
-              </h2>
+            <div className="work-links-wrapper">
+              <div className="work-links">
+                <h2>
+                  <Link
+                    className={
+                      index === 0 ? "work-link link-active" : "work-link"
+                    }
+                    onMouseEnter={handleHover}
+                    onMouseLeave={() => setIndex(4)}
+                    to={"/"}
+                  >
+                    TRABAJO
+                  </Link>
+                </h2>
+                <h2>
+                  <Link
+                    className={
+                      index === 1 ? "work-link link-active" : "work-link"
+                    }
+                    onMouseEnter={handleHover}
+                    onMouseLeave={() => setIndex(4)}
+                    to={"/acerca"}
+                  >
+                    ACERCA
+                  </Link>
+                </h2>
+                <h2>
+                  <Link
+                    className={
+                      index === 2 ? "work-link link-active" : "work-link"
+                    }
+                    onMouseEnter={handleHover}
+                    onMouseLeave={() => setIndex(4)}
+                    to={"/contacto"}
+                  >
+                    CONTACTO
+                  </Link>
+                </h2>
+              </div>
             </div>
           </div>
         </div>

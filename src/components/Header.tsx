@@ -20,7 +20,9 @@ const Header = ({ setNavActive }: Header) => {
       <div className="header">
         <div className="logo-container">
           <h2 className="logo">
-            <Link to={"/"}>tuts</Link>
+            <Link onClick={() => setNavActive(false)} to={"/"}>
+              tuts
+            </Link>
           </h2>
         </div>
         <div className="burger-container">
@@ -42,27 +44,27 @@ const Header = ({ setNavActive }: Header) => {
                     isPending ? "pending" : isActive ? "active" : ""
                   }
                 >
-                  Work
+                  Trabajo
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to={"/about"}
+                  to={"/acerca"}
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
                 >
-                  About
+                  Acerca
                 </NavLink>
               </li>
               <li>
                 <NavLink
-                  to={"/contact"}
+                  to={"/contacto"}
                   className={({ isActive, isPending }) =>
                     isPending ? "pending" : isActive ? "active" : ""
                   }
                 >
-                  Contact
+                  Contacto
                 </NavLink>
               </li>
             </ul>

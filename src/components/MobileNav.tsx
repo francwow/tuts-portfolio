@@ -31,7 +31,7 @@ const MobileNav = ({ setNavActive, deskTop }: MobileNav) => {
       <Social />
       <nav className="mobile-nav">
         <ul className="mobile-list">
-          <li>
+          <li className={navActive ? "fade-up" : ""}>
             <NavLink
               onClick={handleLinkClick}
               to={"/"}
@@ -39,29 +39,29 @@ const MobileNav = ({ setNavActive, deskTop }: MobileNav) => {
                 isPending ? "pending" : isActive ? "active" : ""
               }
             >
-              Work
+              Trabajo
             </NavLink>
           </li>
-          <li>
+          <li className={navActive ? "fade-up" : ""}>
             <NavLink
               onClick={handleLinkClick}
-              to={"/about"}
+              to={"/acerca"}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
             >
-              About
+              Acerca
             </NavLink>
           </li>
-          <li>
+          <li className={navActive ? "fade-up" : ""}>
             <NavLink
               onClick={handleLinkClick}
-              to={"/contact"}
+              to={"/contacto"}
               className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "active" : ""
               }
             >
-              Contact
+              Contacto
             </NavLink>
           </li>
         </ul>
