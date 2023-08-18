@@ -291,6 +291,7 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 5px;
   background-color: var(--color-white);
   animation: fade-up 0.8s ease forwards;
 }
@@ -308,6 +309,65 @@ a {
 .link-active {
   color: tomato;
   transition: 0.2s ease color;
+}
+
+.work-content-wrapper {
+  padding-bottom: 50px;
+}
+
+.work-content-container {
+  position: relative;
+  margin: auto;
+  margin-top: 5vw;
+  margin-bottom: 8vw;
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Audiovisual */
+.audiovisual-wrapper a {
+  color: black;
+}
+
+.audiovisual-wrapper .line-one,
+.audiovisual-wrapper .line-two {
+  background-color: var(--color-dark);
+}
+
+.audiovisual-wrapper .active {
+  border-bottom: 2px solid var(--color-dark);
+}
+
+/* Fotografia */
+.fotografia-wrapper a {
+  color: black;
+}
+
+.fotografia-wrapper .line-one,
+.fotografia-wrapper .line-two {
+  background-color: var(--color-dark);
+}
+
+.fotografia-wrapper .active {
+  border-bottom: 2px solid var(--color-dark);
+}
+
+/* UFX */
+.ufx-wrapper a {
+  color: black;
+}
+
+.ufx-wrapper .line-one,
+.ufx-wrapper .line-two {
+  background-color: var(--color-dark);
+}
+
+.ufx-wrapper .active {
+  border-bottom: 2px solid var(--color-dark);
 }
 
 /* <About /> */
@@ -388,18 +448,24 @@ a {
   transform: translate3d(0, 0, 0);
 }
 
-.contact-link {
-  margin-top: 50px;
+.page-link {
+  margin-top: 0;
 }
 
-.contact-link a {
+.fotografia-link-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page-link a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
-.contact-link-copy {
+.page-link-copy {
   font-size: 1.2rem;
   text-decoration: underline;
 }
@@ -409,8 +475,12 @@ a {
   transition: 0.5s ease transform;
 }
 
-.contact-link:hover .material-symbols-outlined {
+.page-link:hover .material-symbols-outlined {
   transform: translate3d(20%, 0, 0);
+}
+
+.page-link:hover .arrow-back {
+  transform: translate3d(-20%, 0, 0);
 }
 
 /* <Contact /> */
@@ -605,6 +675,7 @@ a {
   .work-links {
     padding: 15px;
     flex-direction: row;
+    gap: 10px;
   }
 
   .work-link {
@@ -627,7 +698,7 @@ a {
     padding: 0;
   }
 
-  .contact-link {
+  .page-link {
     /*  */
   }
 

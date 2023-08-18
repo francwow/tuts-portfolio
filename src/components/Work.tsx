@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet, Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Header from "./Header";
 import MobileNav from "./MobileNav";
+import Audiovisual from "./Audiovisual";
 
 type Work = {
   deskTop: boolean;
@@ -15,11 +16,11 @@ const Work = ({ deskTop, setLanguage, setNavActive }: Work) => {
   const carouselItems = ["work", "about", "contact"];
 
   function handleHover(e: React.MouseEvent) {
-    if ((e.target as Element).innerHTML === "TRABAJO") {
+    if ((e.target as Element).innerHTML === "AUDIOVISUAL") {
       setIndex(0);
-    } else if ((e.target as Element).innerHTML === "ACERCA") {
+    } else if ((e.target as Element).innerHTML === "FOTOGRAFÍA") {
       setIndex(1);
-    } else if ((e.target as Element).innerHTML === "CONTACTO") {
+    } else if ((e.target as Element).innerHTML === "UFX") {
       setIndex(2);
     }
   }
@@ -74,9 +75,9 @@ const Work = ({ deskTop, setLanguage, setNavActive }: Work) => {
                     }
                     onMouseEnter={handleHover}
                     onMouseLeave={() => setIndex(4)}
-                    to={"/"}
+                    to={"/trabajo/audiovisual"}
                   >
-                    TRABAJO
+                    AUDIOVISUAL
                   </Link>
                 </h2>
                 <h2>
@@ -86,9 +87,9 @@ const Work = ({ deskTop, setLanguage, setNavActive }: Work) => {
                     }
                     onMouseEnter={handleHover}
                     onMouseLeave={() => setIndex(4)}
-                    to={"/acerca"}
+                    to={"/trabajo/fotografia"}
                   >
-                    ACERCA
+                    FOTOGRAFÍA
                   </Link>
                 </h2>
                 <h2>
@@ -98,9 +99,9 @@ const Work = ({ deskTop, setLanguage, setNavActive }: Work) => {
                     }
                     onMouseEnter={handleHover}
                     onMouseLeave={() => setIndex(4)}
-                    to={"/contacto"}
+                    to={"/trabajo/ufx"}
                   >
-                    CONTACTO
+                    UFX
                   </Link>
                 </h2>
               </div>

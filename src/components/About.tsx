@@ -90,9 +90,9 @@ const About = ({ deskTop, setLanguage, setNavActive }: About) => {
                 </p>
               </div>
             </div>
-            <div className="contact-link">
+            <div className="page-link">
               <Link to="/contacto">
-                <span className="contact-link-copy">
+                <span className="page-link-copy">
                   <strong>trabajemos juntos</strong>
                 </span>
                 <span className="material-symbols-outlined">arrow_forward</span>

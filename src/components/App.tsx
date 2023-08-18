@@ -9,6 +9,9 @@ import Work from "./Work";
 import About from "./About";
 import Contact from "./Contact";
 import NavContext from "../context/NavContext";
+import Audiovisual from "./Audiovisual";
+import Fotografia from "./Fotografia";
+import UFX from "./UFX";
 
 const App = () => {
   const [language, setLanguage] = useState<LanguageContextType>("ES");
@@ -58,6 +61,36 @@ const App = () => {
               path="/contacto"
               element={
                 <Contact
+                  deskTop={deskTop}
+                  setLanguage={setLanguage}
+                  setNavActive={setNavActive}
+                />
+              }
+            />
+            <Route
+              path="/trabajo/audiovisual"
+              element={
+                <Audiovisual
+                  deskTop={deskTop}
+                  setLanguage={setLanguage}
+                  setNavActive={setNavActive}
+                />
+              }
+            />
+            <Route
+              path="/trabajo/fotografia"
+              element={
+                <Fotografia
+                  deskTop={deskTop}
+                  setLanguage={setLanguage}
+                  setNavActive={setNavActive}
+                />
+              }
+            />
+            <Route
+              path="/trabajo/ufx"
+              element={
+                <UFX
                   deskTop={deskTop}
                   setLanguage={setLanguage}
                   setNavActive={setNavActive}
